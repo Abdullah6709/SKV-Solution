@@ -32,7 +32,7 @@ const steps = [
     description: 'Our consultants draft, structure, and refine missing ESG policies, KPI reporting templates, energy logs, and safety manuals to meet EcoVadis standards.',
     icon: <EditNoteIcon sx={{ fontSize: 32, color: '#ffffff' }} />,
     color: '#047857',
-    tags: ['ESG Policy Drafting', 'KPI Documentation', 'ISO Alignment']
+    tags: ['ESG Policy Drafting', 'KPI Documentation', 'EcoVadis Evidence']
   },
   {
     stepNum: '03',
@@ -64,17 +64,7 @@ const ProcessTimeline = () => {
       <Container maxWidth="lg">
         {/* Section Header */}
         <Box sx={{ textAlign: 'center', mb: 8, maxWidth: 800, mx: 'auto' }}>
-          <Chip
-            label="PROVEN CONSULTING ROADMAP"
-            sx={{
-              bgcolor: 'rgba(5, 150, 105, 0.1)',
-              color: '#064e3b',
-              fontWeight: 800,
-              fontSize: '0.75rem',
-              letterSpacing: '0.08em',
-              mb: 2,
-            }}
-          />
+
           <Typography
             variant="h2"
             sx={{
@@ -88,7 +78,7 @@ const ProcessTimeline = () => {
             4-Step Path to <span className="gradient-text">EcoVadis Certification</span> Success
           </Typography>
           <Typography variant="body1" sx={{ color: '#64748b', fontSize: '1.05rem' }}>
-            A streamlined, hassle-free methodology designed by SKV Solutions to maximize your score 
+            A streamlined, hassle-free methodology designed by SKV Solutions to maximize your score
             while minimizing internal workload for your team.
           </Typography>
         </Box>
@@ -188,7 +178,7 @@ const ProcessTimeline = () => {
             Ready to Upgrade Your EcoVadis Scorecard?
           </Typography>
           <Typography variant="body1" sx={{ color: '#e2e8f0', maxWidth: 650, mx: 'auto', mb: 4, fontSize: '1.1rem' }}>
-            Speak directly with SKV Solutions senior sustainability consultants today. 
+            Speak directly with SKV Solutions senior sustainability consultants today.
             We review your current status free of charge.
           </Typography>
 

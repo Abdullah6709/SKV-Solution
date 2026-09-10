@@ -56,8 +56,8 @@ const Footer = () => {
             </Box>
 
             <Typography variant="body2" sx={{ color: '#cbd5e1', mb: 3, lineHeight: 1.6 }}>
-              SKV Solutions Pvt Ltd is a premier management consulting firm specializing in 
-              EcoVadis Sustainability Rating, ESG Compliance, and Supply Chain Sustainability Assessments.
+              SKV Solutions Pvt Ltd is a premier consultancy firm specializing exclusively in 
+              EcoVadis Sustainability Ratings, Medal Upgrades, and Evidence Documentation Support.
             </Typography>
 
             <Stack direction="row" spacing={1}>
@@ -81,7 +81,6 @@ const Footer = () => {
             <Stack spacing={1.2}>
               {[
                 { label: 'Home', href: '#hero' },
-                { label: 'About', href: '#about' },
                 { label: 'Services', href: '#services' },
                 { label: 'Contact', href: '#contact' },
               ].map((item) => (

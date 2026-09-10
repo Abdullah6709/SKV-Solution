@@ -21,7 +21,6 @@ import EmailIcon from '@mui/icons-material/Email';
 
 const navItems = [
   { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -110,7 +109,7 @@ const Navbar = () => {
                   mt: 0.2
                 }}
               >
-                Enterprise Compliance & ESG Advisory
+                EcoVadis Certification Advisory
               </Typography>
             </Box>
           </Box>
@@ -162,25 +161,7 @@ const Navbar = () => {
               8800320483
             </Button>
 
-            <Button
-              variant="outlined"
-              color="secondary"
-              onClick={() => handleNavClick('#contact')}
-              sx={{
-                display: { xs: 'none', md: 'inline-flex' },
-                borderColor: '#059669',
-                color: '#059669',
-                fontWeight: 700,
-                py: 1.1,
-                px: 2.2,
-                '&:hover': {
-                  borderColor: '#064e3b',
-                  bgcolor: 'rgba(5, 150, 105, 0.06)',
-                }
-              }}
-            >
-              Contact Us
-            </Button>
+
 
             {/* Mobile Hamburger Menu Icon */}
             <IconButton
