@@ -93,7 +93,7 @@ const Footer = () => {
             </Stack>
 
             {/* Right: Phone & Email Contacts */}
-            <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 1.5, sm: 3 }} alignItems="center">
+            <Stack direction={{ xs: 'column', lg: 'row' }} spacing={{ xs: 1.5, sm: 2.5 }} alignItems="center">
               <Stack direction="row" spacing={1} alignItems="center">
                 <PhoneInTalkIcon sx={{ fontSize: 18, color: '#00e676' }} />
                 <Link
@@ -107,13 +107,23 @@ const Footer = () => {
 
               <Stack direction="row" spacing={1} alignItems="center">
                 <EmailIcon sx={{ fontSize: 18, color: '#00e676' }} />
-                <Link
-                  href="mailto:enquiry@skvs.in"
-                  underline="none"
-                  sx={{ color: '#ffffff', fontWeight: 700, fontSize: '0.875rem' }}
-                >
-                  enquiry@skvs.in
-                </Link>
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 0.5, sm: 1.5 }} alignItems="center">
+                  <Link
+                    href="mailto:enquiry@skvs.in"
+                    underline="none"
+                    sx={{ color: '#ffffff', fontWeight: 700, fontSize: '0.875rem', '&:hover': { color: '#00e676' } }}
+                  >
+                    enquiry@skvs.in
+                  </Link>
+                  <Typography variant="caption" sx={{ color: 'rgba(255,255,255,0.4)', display: { xs: 'none', sm: 'inline' } }}>|</Typography>
+                  <Link
+                    href="mailto:manoj@skvs.in"
+                    underline="none"
+                    sx={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 600, fontSize: '0.875rem', '&:hover': { color: '#00e676' } }}
+                  >
+                    manoj@skvs.in
+                  </Link>
+                </Stack>
               </Stack>
             </Stack>
           </Stack>
