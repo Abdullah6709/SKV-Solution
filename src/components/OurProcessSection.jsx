@@ -130,106 +130,120 @@ const OurProcessSection = () => {
             </Box>
           </Grid>
 
-          {/* Right Column: 4 Step Process Horizontal Cards */}
+          {/* Right Column: 4 Step Process Horizontal Cards in 1 Row */}
           <Grid item xs={12} md={8} lg={8.5}>
-            <Grid container spacing={{ xs: 2, sm: 2, lg: 2.5 }} alignItems="flex-start">
+            <Box
+              sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                alignItems: 'flex-start',
+                justifyContent: 'space-between',
+                gap: { xs: 3, sm: 1, md: 1.5 },
+              }}
+            >
               {steps.map((step, index) => (
                 <React.Fragment key={index}>
-                  <Grid item xs={12} sm={6} md={3}>
-                    <Box sx={{ textAlign: 'center', position: 'relative' }}>
-                      {/* Circle Icon Node with Badge */}
+                  <Box
+                    sx={{
+                      flex: 1,
+                      textAlign: 'center',
+                      position: 'relative',
+                      minWidth: 0,
+                    }}
+                  >
+                    {/* Circle Icon Node with Badge */}
+                    <Box
+                      sx={{
+                        position: 'relative',
+                        display: 'inline-block',
+                        mb: 2,
+                      }}
+                    >
                       <Box
                         sx={{
-                          position: 'relative',
-                          display: 'inline-block',
-                          mb: 2.5,
+                          width: { xs: 60, sm: 64, md: 68 },
+                          height: { xs: 60, sm: 64, md: 68 },
+                          borderRadius: '50%',
+                          bgcolor: step.bgColor,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          boxShadow: `0 8px 20px ${step.bgColor}40`,
+                          mx: 'auto',
                         }}
                       >
-                        <Box
-                          sx={{
-                            width: 68,
-                            height: 68,
-                            borderRadius: '50%',
-                            bgcolor: step.bgColor,
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            boxShadow: `0 8px 20px ${step.bgColor}40`,
-                            mx: 'auto',
-                          }}
-                        >
-                          {step.icon}
-                        </Box>
-
-                        {/* Step Number Badge */}
-                        <Box
-                          sx={{
-                            position: 'absolute',
-                            top: -4,
-                            right: -4,
-                            width: 24,
-                            height: 24,
-                            borderRadius: '50%',
-                            bgcolor: '#ffffff',
-                            color: '#0f172a',
-                            fontWeight: 900,
-                            fontSize: '0.75rem',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            border: '2px solid #e2e8f0',
-                            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-                          }}
-                        >
-                          {step.stepNum}
-                        </Box>
+                        {step.icon}
                       </Box>
 
-                      {/* Step Title & Description */}
-                      <Typography
-                        variant="h6"
+                      {/* Step Number Badge */}
+                      <Box
                         sx={{
-                          fontWeight: 800,
-                          fontSize: '0.98rem',
+                          position: 'absolute',
+                          top: -4,
+                          right: -4,
+                          width: 24,
+                          height: 24,
+                          borderRadius: '50%',
+                          bgcolor: '#ffffff',
                           color: '#0f172a',
-                          mb: 1,
-                          lineHeight: 1.3,
+                          fontWeight: 900,
+                          fontSize: '0.75rem',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          border: '2px solid #e2e8f0',
+                          boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
                         }}
                       >
-                        {step.title}
-                      </Typography>
-
-                      <Typography
-                        variant="body2"
-                        sx={{
-                          color: '#64748b',
-                          fontSize: '0.825rem',
-                          lineHeight: 1.5,
-                        }}
-                      >
-                        {step.description}
-                      </Typography>
+                        {step.stepNum}
+                      </Box>
                     </Box>
-                  </Grid>
 
-                  {/* Connecting Arrow between steps (desktop only) */}
+                    {/* Step Title & Description */}
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        fontWeight: 800,
+                        fontSize: { xs: '0.9rem', sm: '0.88rem', md: '0.95rem' },
+                        color: '#0f172a',
+                        mb: 0.8,
+                        lineHeight: 1.25,
+                      }}
+                    >
+                      {step.title}
+                    </Typography>
+
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: '#64748b',
+                        fontSize: { xs: '0.8rem', sm: '0.75rem', md: '0.825rem' },
+                        lineHeight: 1.45,
+                      }}
+                    >
+                      {step.description}
+                    </Typography>
+                  </Box>
+
+                  {/* Connecting Arrow between steps (desktop/tablet only) */}
                   {index < steps.length - 1 && (
                     <Box
                       sx={{
-                        display: { xs: 'none', md: 'flex' },
+                        display: { xs: 'none', sm: 'flex' },
                         alignItems: 'center',
                         justifyContent: 'center',
                         color: '#cbd5e1',
-                        pt: 3,
-                        mx: -1
+                        pt: 2.5,
+                        px: 0.2,
+                        flexShrink: 0,
                       }}
                     >
-                      <ChevronRightIcon sx={{ fontSize: 24 }} />
+                      <ChevronRightIcon sx={{ fontSize: { sm: 18, md: 22 } }} />
                     </Box>
                   )}
                 </React.Fragment>
               ))}
-            </Grid>
+            </Box>
           </Grid>
         </Grid>
       </Container>
